@@ -53,8 +53,9 @@ public class Deneme03StepDefinition {
     }
 
     @Then("Eğitimler bölümüne tıklar")
-    public void eğitimlerBölümüneTıklar() {
+    public void eğitimlerBölümüneTıklar() throws InterruptedException {
         WebElement egitimlerLink = driver.findElement(By.xpath("//a[@href='/courses']"));
         egitimlerLink.click();
+        Thread.sleep(2000);
     }
 }
