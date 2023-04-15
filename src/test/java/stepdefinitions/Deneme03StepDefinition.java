@@ -34,7 +34,7 @@ public class Deneme03StepDefinition {
     @Then("Ücretsiz İKAS eğitim videosuna tıklar ve tüm videolarının çalıştıgını kontrol eder.")
     public void ücretsiz_ikas_eğitim_videosuna_tıklar_ve_tüm_videolarının_çalıştıgını_kontrol_eder() {
 
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("heading-course")));
 
         element.click();

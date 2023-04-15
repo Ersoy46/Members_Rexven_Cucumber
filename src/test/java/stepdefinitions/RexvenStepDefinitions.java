@@ -25,15 +25,17 @@ public class RexvenStepDefinitions {
 
     @Given("Kullanıcı Rexven ana sayfaya gider")
     public void kullanıcı_rexven_ana_sayfaya_gider() throws InterruptedException {
-        Driver.getDriver().get(ConfigReader.getProperty("RexvenUrl"));
+        Driver.getDriver().get("https://www.rexven.com");
+
         String mainWindowHandle = driver.getWindowHandle();
         Thread.sleep(1000);
+
 
     }
 
     @Then("Ana sayfada bulunan Topluluk Paketleri Sekmesine tıklar")
     public void ana_sayfada_bulunan_topluluk_paketleri_sekmesine_tıklar() throws InterruptedException {
-        WebElement toplulukPaketleriSekmesi = driver.findElement(By.xpath("//a[@href and contains(@href,'topluluk-paketleri')]\n"));
+        WebElement toplulukPaketleriSekmesi = driver.findElement(By.xpath("//nav[@class='elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-fade']//a[.='Topluluk Paketleri']"));
         toplulukPaketleriSekmesi.click();
         Thread.sleep(1000);
 
@@ -92,6 +94,7 @@ public class RexvenStepDefinitions {
         WebElement SSLGuvenliOdeme = driver.findElement(By.xpath("//span[text()='SSL Güvenli Ödeme']"));
         Assert.assertTrue(SSLGuvenliOdeme.isDisplayed());
         Thread.sleep(2000);
+        
     }
 
     @Then("mail adresi girer")

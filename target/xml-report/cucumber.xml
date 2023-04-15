@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="41.684" tests="1" skipped="0" failures="0" errors="0">
+<testcase classname="Rexven Ödeme Butonları" name="Aylık_Yıllık_Ödeme_Planları" time="41.553">
+<system-out><![CDATA[
+Given Kullanıcı Rexven ana sayfaya gider....................................passed
+Then Ana sayfada bulunan Topluluk Paketleri Sekmesine tıklar................passed
+Then Yıllık butonuna tıklar.................................................passed
+And Tekrar aylık butonuna tıklar............................................passed
+And sayfayı aşagı kaydırır..................................................passed
+Then Ekosisteme katıl sekmesine tıklar......................................passed
+Then Yeni açılan sayfafa SSL GÜVENLİ ÖDEME  yazısını gördügünü dogrula......passed
+Then mail adresi girer......................................................passed
+And Ad, Soyad, Telefon girer................................................passed
+And TC, Adres bir, Adres iki, girer.........................................passed
+And Şehir, Ülke, Posta Kodu, girer..........................................passed
+Then Ek Bilgi butonuna Not yazar............................................passed
+Then kupon kodu girer.......................................................passed
+Then ödeme yap butonuna tıklar..............................................passed
+And tüm sayfanın ekran görüntüsünü alır ve sayfayı kapatır..................passed
+]]></system-out>
+</testcase>
+</testsuite>
