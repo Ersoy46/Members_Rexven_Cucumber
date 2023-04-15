@@ -7,6 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.List;
 
 import static utilities.Driver.driver;
@@ -33,13 +34,13 @@ public class Deneme03StepDefinition {
     @Then("Ücretsiz İKAS eğitim videosuna tıklar ve tüm videolarının çalıştıgını kontrol eder.")
     public void ücretsiz_ikas_eğitim_videosuna_tıklar_ve_tüm_videolarının_çalıştıgını_kontrol_eder() {
 
-        WebDriverWait wait = new WebDriverWait(driver, 15);
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("heading-course")));
 
         element.click();
 
         WebElement videoContainer = driver.findElement(By.className("plyr__video-wrapper"));
-        WebDriverWait wait1 = new WebDriverWait(driver, 10);
+        WebDriverWait wait1 = new WebDriverWait(driver, Duration.ofSeconds(15));
         wait1.until(ExpectedConditions.visibilityOfAllElements(videoContainer.findElements(By.tagName("video"))));
 
         List<WebElement> videoList = videoContainer.findElements(By.tagName("video"));

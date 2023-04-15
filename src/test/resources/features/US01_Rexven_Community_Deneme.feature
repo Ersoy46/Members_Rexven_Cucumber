@@ -1,5 +1,5 @@
 Feature: Rexven Ödeme Butonları
-@Rexven01
+@deneme3
   Scenario: Aylık_Yıllık_Ödeme_Planları
 
    Given Kullanıcı Rexven ana sayfaya gider

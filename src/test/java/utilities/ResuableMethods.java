@@ -92,28 +92,28 @@ public class ResuableMethods {
     }
     //===============Explicit Wait==============//
     public static WebElement waitForVisibility(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 20);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.visibilityOf(element));
 
     }
 
     public WebElement waitAndReturnElement(By selector){
-        WebDriverWait wait = new WebDriverWait(driver,30);
+        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(15));
         WebElement element = wait.until(ExpectedConditions.visibilityOfElementLocated(selector));
         return element;
     }
     public static WebElement waitForVisibility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
     public static WebElement waitForClickablility(WebElement element, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.elementToBeClickable(element));
     }
 
     public static WebElement waitForClickablility(By locator, int timeout) {
-        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 30);
+        WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
@@ -125,7 +125,7 @@ public class ResuableMethods {
         };
         try {
             System.out.println("Waiting for page to load...");
-            WebDriverWait wait = new WebDriverWait(Driver.getDriver(),30);
+            WebDriverWait wait = new WebDriverWait(Driver.getDriver(),Duration.ofSeconds(15));
             wait.until(expectation);
         } catch (Throwable error) {
             System.out.println(

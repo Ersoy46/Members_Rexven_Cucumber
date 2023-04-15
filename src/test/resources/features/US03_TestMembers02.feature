@@ -1,5 +1,5 @@
 Feature:Test03
-@deneme3 @smoke
+ @deneme2
   Scenario: Test
 
     Given Kullanıcı Test-Members.RexvenURL'sine gider

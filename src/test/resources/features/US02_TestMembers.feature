@@ -1,5 +1,5 @@
 Feature: TestMembers_Deneme
-@members
+ @deneme1
   Scenario: Deneme01
 
     Given Kullanıcı Test-Members.RexvenURL'sine gider
