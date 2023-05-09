@@ -115,6 +115,7 @@ public class ResuableMethods {
     public static WebElement waitForClickablility(By locator, int timeout) {
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
+
     }
 
     public static void waitForPageToLoad(long timeout) {

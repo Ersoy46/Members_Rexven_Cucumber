@@ -5,8 +5,10 @@ import io.cucumber.java.en.Then;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import pages.RexvenPage;
 import utilities.ConfigReader;
 import utilities.Driver;
+import utilities.ResuableMethods;
 
 import static utilities.Driver.driver;
 
@@ -15,6 +17,7 @@ public class DenemeStepDefinition {
     @Given("Kullanıcı Test-Members.RexvenURL'sine gider")
     public void kullanıcıTestMembersRexvenURLSineGider() {
         Driver.getDriver().get(ConfigReader.getProperty("Test-Members.RexvenURL"));
+
     }
     @Then("email ve password butonlarını gerçek bilgiler girerek doldurur ve giriş yap butonuna basar")
     public void email_ve_password_butonlarını_gerçek_bilgiler_girerek_doldurur_ve_giriş_yap_butonuna_basar() throws InterruptedException {
@@ -27,8 +30,9 @@ public class DenemeStepDefinition {
         Thread.sleep(2000);
 
         driver.findElement(By.xpath("//button[@type='submit']")).click();
-
         Thread.sleep(2000);
+
+
     }
     @Then("Ana sayfayı aşagı kaydırır ve sayfayı gözden geçirir")
     public void ana_sayfayı_aşagı_kaydırır_ve_sayfayı_gözden_geçirir() throws InterruptedException {
