@@ -1,4 +1,5 @@
 stepdefinitions\DenemeStepDefinition.class
+stepdefinitions\Hooks.class
 runners\Runner.class
 utilities\Driver.class
 stepdefinitions\RexvenStepDefinitions.class

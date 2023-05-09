@@ -19,6 +19,6 @@ Feature: Rexven Ödeme Butonları
    Then kupon kodu girer
   And sayfayı aşagı kaydırır
    Then ödeme yap butonuna tıklar
-  And tüm sayfanın ekran görüntüsünü alır ve sayfayı kapatır.
+  #And tüm sayfanın ekran görüntüsünü alır ve sayfayı kapatır.
 
 

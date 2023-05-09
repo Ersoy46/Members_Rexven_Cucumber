@@ -30,6 +30,7 @@ public class Deneme03StepDefinition {
        js3.executeScript("window.scrollTo(0, 0);");
 
 
+
     }
     @Then("Ücretsiz İKAS eğitim videosuna tıklar ve tüm videolarının çalıştıgını kontrol eder.")
     public void ücretsiz_ikas_eğitim_videosuna_tıklar_ve_tüm_videolarının_çalıştıgını_kontrol_eder() {
